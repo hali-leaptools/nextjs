@@ -10,7 +10,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "lint": "eslint && markdownlint-cli2 **/*.md",
-    "prepare": "husky"
+    "prepare": "husky",
+    "server": "tsx server/index.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",

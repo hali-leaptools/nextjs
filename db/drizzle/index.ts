@@ -1,9 +1,12 @@
 import { faker } from "@faker-js/faker";
 import { drizzle } from "drizzle-orm/libsql";
 
-import { communitiesTable, roomsTable, usersTable } from "@/db/drizzle/schema";
+import * as schema from "@/db/drizzle/schema";
 
-export const db = drizzle(process.env.DB_URL as string, { logger: true });
+export const db = drizzle(process.env.DB_URL as string, {
+  logger: true,
+  schema,
+});
 
 const queryPixabay = async (): Promise<
   Array<{ previewURL: string; largeImageURL: string }>
@@ -31,6 +34,8 @@ const queryPixabay = async (): Promise<
   const data = await response.json();
   return data.hits;
 };
+
+const { communitiesTable, roomsTable, usersTable } = schema;
 
 export async function seed() {
   // Use a specific seed for faker-js for reproducible data
