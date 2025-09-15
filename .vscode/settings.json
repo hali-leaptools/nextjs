@@ -1,0 +1,40 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    ".next": true,
+    "dist": true
+  },
+
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "always",
+    "source.fixAll.eslint": "always"
+  },
+
+  "eslint.format.enable": true,
+  "eslint.enable": true,
+  "eslint.run": "onSave",
+
+  "markdownlint.configFile": ".markdownlint-cli2.jsonc",
+
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
