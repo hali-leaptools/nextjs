@@ -6,13 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
+    "server": "tsx --env-file=.env server/index.ts --watch",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
+    "type-check": "tsc --noEmit",
     "lint:es": "eslint",
     "lint:md": "markdownlint-cli2 **/*.md",
-    "prepare": "husky",
-    "server": "tsx --env-file=.env server/index.ts --watch"
+    "prepare": "husky"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
