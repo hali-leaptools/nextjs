@@ -3,7 +3,8 @@ import { drizzle } from "drizzle-orm/libsql";
 
 import * as schema from "@/db/drizzle/schema";
 
-export const db = drizzle(process.env.DB_URL as string, {
+export const db = drizzle({
+  connection: { url: process.env.DB_URL as string },
   logger: true,
   schema,
 });
